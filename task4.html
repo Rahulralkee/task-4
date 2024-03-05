@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="calendarApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Event Calendar</title>
+  <link rel="stylesheet" href="task4.css">
+</head>
+<body ng-controller="CalendarController">
+  <div class="container">
+    <h1>Event Calendar</h1>
+    <div class="calendar">
+      <div class="calendar-header">
+        <button ng-click="previousMonth()">Previous</button>
+        <button ng-click="nextMonth()">Next</button>
+      </div>
+      <div class="weekdays">
+        <div class="weekday" ng-repeat="day in weekdays">{{ day }}</div>
+      </div>
+      <div class="days">
+        <div class="day" ng-class="{ 'today': isToday(day), 'selected': isSelected(day) }" ng-repeat="day in days" ng-click="selectDate(day)">
+          <span>{{ day.day }}</span>
+          <div class="events" ng-if="day.events.length > 0">
+            <div class="event" ng-repeat="event in day.events">{{ event }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="day" ng-class="{ 'today': isToday(day), 'selected': isSelected(day) }" ng-repeat="day in days" ng-click="selectDate(day)">
+  <span>{{ day.day }}</span>
+  <div class="events" ng-if="day.events.length > 0">
+    <div class="event" ng-repeat="event in day.events">{{ event }}</div>
+  </div>
+  <div>
+    <input type="text" ng-model="eventText" placeholder="Add event">
+    <button ng-click="scheduleEvent(eventText)">Schedule</button>
+  </div>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="task4.js"></script>
+</body>
+</html>

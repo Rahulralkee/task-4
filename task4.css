@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.calendar {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.weekdays {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.weekday {
+  flex: 1;
+  text-align: center;
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.day span {
+  font-weight: bold;
+}
+body
+{
+  background-color:yellow;
+}
+.today {
+  background-color: #ffff99;
+}
+
+.selected {
+  background-color: #b3d9ff;
+}
+
+.events {
+  margin-top: 5px;
+}
+
+.event {
+  background-color: #e6f2ff;
+  padding: 2px 5px;
+  margin-bottom: 2px;
+}
